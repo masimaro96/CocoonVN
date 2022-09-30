@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="cocoon.css">
     <link
         rel="stylesheet"
         type="text/css"
@@ -37,13 +37,13 @@
                                 <a class="navbar-brand" href="javascript:void(0)"><ion-icon size="small" name="search-outline"></ion-icon></a>
                                 <ul class="navbar-nav me-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Sản phẩm</a>
+                                        <a class="nav-link" href="javascript:void(0)" onclick="openProduct()">Sản phẩm</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Khuyến mãi</a>
+                                        <a class="nav-link" href="javascript:void(0)" onclick="openProduct()">Khuyến mãi</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Cocoon</a>
+                                        <a class="nav-link" href="javascript:void(0)" onclick="openProduct()">Cocoon</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="javascript:void(0)">Bài viết</a>
@@ -62,7 +62,7 @@
                                         <a class="nav-link" href="javascript:void(0)">Liên hệ</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="javascript:void(0)">Giỏ hàng</a>
+                                        <a class="nav-link"  onclick="openNav()">Giỏ hàng</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="javascript:void(0)">EN</a>
@@ -72,18 +72,33 @@
                         </div>
                     </nav>
                 </div>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div id="search" class="sidenav-product">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeProduct()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
             </div>
         </div>
-    </div>
+    </div>    
+      <!-- Use any element to open the sidenav -->
     <div class="container-fluid page">
         <div class="full-page">
-            <div class="main-contain">
+            <div id="main-contain">
                 <div class="product-slider">
                     <div class="product-item">
                         <div class="text-box">
                             <div class="box-1">
-                                <p class="subtitle-1">Xịt thâm mụn lưng bí đao</p>
-                                <p class="subtitle-2">Giải pháp mờ thâm sạch mụn vùng lưng hiệu quả</p>
+                                <h1 class="subtitle-1">Xịt thâm mụn lưng bí đao</h1>
+                                <h2 class="subtitle-2">Giải pháp mờ thâm sạch mụn vùng lưng hiệu quả</h2>
                                 <div class="title">
                                     <p class="content">Công thức dạng nước nhanh chóng thấm sâu vào lỗ chân lông giúp làm sạch mụn, làm mờ vết thâm và hạn chế mụn mới hình thành. Vòi xịt 360 độ có khả năng hoạt động mọi góc độ, khi dốc ngược vẫn có thể bấm xịt vào vùng lưng một cách dễ dàng.</p>
                                 </div>
@@ -149,40 +164,40 @@
                         </marquee>
                     </div>
                 </div> <!--  content-4 -->
-                <div class="cert">
-                    <div class="row text-center padding">
+                <div class="cert-intro-kem-chong-nang">
+                    <div class="row text-center padding list-cert">
                         <h3>CHỨNG NHẬN BỞI CÁC TỔ CHỨC QUỐC TẾ</h3>
-                        <div class="col-xs-12 col-sm-8 col-md-4">
+                        <div class="col-sm-4">
                             <img src="image/leaping_bunny_bdcbdfe9f1.svg" alt="">
-                            <p class="title-cert">Leaping Bunny</p>
+                            <h2 class="title-cert">Leaping Bunny</h2>
                             <p class="program">CHƯƠNG TRÌNH LEAPING BUNNY</p>
                             <p class="content-program">Chương trình Leapin Bunny của tổ chức Cruelty Free International được xem là "tiêu chuẩn vàng" toàn cầu cho các sản phẩm không thử nghiệm trên động vật.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-8 col-md-4">
-                                <img src="image/vegan_society_41cc2b390a.svg" alt="">
-                                <p class="title">The Vegan Society</p>
-                                <p class="program">HIỆP HỘI THUẦN CHAY QUỐC TẾ</p>
-                                <p class="content-program">The Vegan Society (Hiệp hội thuần chay quốc tế) là một trong những chứng nhận uy tín xác thực cho các sản phẩm không có thành phần từ động vật và không thử nghiệm trên động vật.</p>
+                        <div class="col-sm-4">
+                            <img src="image/vegan_society_41cc2b390a.svg" alt="">
+                            <h2 class="title-cert">The Vegan Society</h2>
+                            <p class="program">HIỆP HỘI THUẦN CHAY QUỐC TẾ</p>
+                            <p class="content-program">The Vegan Society (Hiệp hội thuần chay quốc tế) là một trong những chứng nhận uy tín xác thực cho các sản phẩm không có thành phần từ động vật và không thử nghiệm trên động vật.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-8 col-md-4">
-                                <img src="image/e3084968637945bfc13699f3682f28a6_24f04f4362.svg" alt="">
-                                <p class="title">PETA</p>
-                                <p class="program">ANIMAL TEST-FREE & VEGAN</p>
-                                <p class="content-program">Chương trình Beauty Without Bunnies của tổ chức bảo vệ quyền lợi động vật toàn cầu PETA là chương trình bảo vệ và cam kết không có sự tàn ác đối với động vật uy tín trên thế giới.</p>
+                        <div class="col-sm-4">
+                            <img src="image/e3084968637945bfc13699f3682f28a6_24f04f4362.svg" alt="">
+                            <h2 class="title-cert">PETA</h2>
+                            <p class="program">ANIMAL TEST-FREE & VEGAN</p>
+                            <p class="content-program">Chương trình Beauty Without Bunnies của tổ chức bảo vệ quyền lợi động vật toàn cầu PETA là chương trình bảo vệ và cam kết không có sự tàn ác đối với động vật uy tín trên thế giới.</p>
                         </div>
                     </div>
-                </div> <!--  content-5 -->
-                <div class="intro-kem-chong-nang">
-                    <a href="" class="kemchongnang"><img src="image/kem-chong-nang.jpg" alt=""></a>
-                </div> <!--  content-6 -->
-                <div class="content-6">
-                    <div class="san-pham-ban-chay">
-                        <div class="intro-san-pham-ban-chay">
+                    <div class="intro-kem-chong-nang">
+                        <a href="" class="kemchongnang"><img src="image/kem-chong-nang.jpg" alt=""></a>
+                    </div> 
+                </div> <!--  cert-intro-kem-chong-nang -->
+                <div class="container-fluid">
+                    <div class="row san-pham-ban-chay">
+                        <div class="col-sm-3 intro-san-pham-ban-chay">
                             <h3 class="product">Sản phẩm</h3>
                             <h3 class="ban-chay">Bán chạy</h3>
                             <p class="intro">Cocoon tự hào khi các sản phẩm mà chúng tôi tạo ra mang đến những thay đổi tuyệt vời trên làn da, mái tóc của bạn.</p>
                         </div>
-                        <div class="list-san-pham">
+                        <div class="col-sm-9 list-san-pham">
                             <div class="image-slider">
                                 <div class="image-item">
                                     <div class="image">
@@ -263,8 +278,7 @@
                         </div>
                     </div>
                 </div> <!--  content-7 -->
-                <div class="content-7">
-                    <div class="row doi-vo-chai">
+                <div class="doi-vo-chai">
                         <a href="" class="song-xanh"><img src="image/doi-vo-chai.jpg" alt=""></a>
                     </div>
                 </div> <!--  content-8 -->
@@ -334,7 +348,7 @@
                             </div>
                         </div>
                         <div class="row cocoonvn-image">
-                            <div class="col">
+                            <div class="col-sm-4">
                                 <div class="thu-hoi-pin">
                                     <a href=""><img src="image/Thu_hoi_pin_cu_.png" alt=""></a>
                                     <p>
@@ -347,7 +361,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-sm-4">
                                 <div class="thu-hoi-pin">
                                     <a href=""><img src="image/Thu_hoi_pin_cu_1.png" alt=""></a>
                                     <p>
@@ -360,7 +374,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-sm-4">
                                 <div class="thu-hoi-pin">
                                     <a href=""><img src="image/gau-cocoon.jpg" alt=""></a>
                                     <p>
@@ -520,6 +534,30 @@
             </div> <!--  main-contain -->
         </div> <!--  full-page -->
     </div> <!--  page -->
+
+<!-- sidebar    -->
+<script>
+    function openProduct() {
+      document.getElementById("search").style.width = "566px";
+    }
+    
+    function closeProduct() {
+      document.getElementById("search").style.width = "0";
+    }
+</script>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "566px";
+        document.getElementById("main-contain").style.marginRight = "566px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main-contain").style.marginRight= "0";
+        document.body.style.backgroundColor = "white";
+    }
+</script>
 <script
   type="text/javascript"
   src="https://code.jquery.com/jquery-1.11.0.min.js"
