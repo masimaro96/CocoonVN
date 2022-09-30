@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cocoon.css">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+</head>
+<body>
+    <div class="container-fluid page">
+        <div class="full-page">
+            <div class="fixed-top">
+                <div class="announcement">
+                    <a href="">Tận hưởng giao hàng miễn phí toàn quốc với hoá đơn từ 99.000 đ</a>
+                </div>
+                <div class="hidden lg:block nav_pc">
+                    <div class="topnav">
+                        <!-- Centered link -->
+                        <div class="topnav-centered">
+                            <a href="#home" class="active"><img src="https://cocoonvietnam.com/_nuxt/img/logo.f502f17.svg"></a>
+                        </div>
+                        
+                        <!-- Left-aligned links (default) -->
+                        <a href="#search" onclick="openProduct()"><ion-icon size="small" name="search-outline"></ion-icon></a>
+                        <a href="#product" onclick="openProduct()">Sản phẩm</a>
+                        <a href="#sale" onclick="openProduct()">Khuyến mãi</a>
+                        <a href="#brand" onclick="openProduct()">Cocoon</a>
+                        <a href="#articles">Bài viết</a>
+                        
+                        <!-- Right-aligned links -->
+                        <div class="topnav-right">
+                            <a href="#login">Đăng nhập</a>
+                            <a href="#cart"><label for="nav-cart-input">Giỏ hàng</label> </a>
+                            <a href="#lang">EN</a>
+                        </div>
+                    </div>
+
+                    <label for="nav-mobile-input" class="nav__bar-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Menu</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
+                    </label>
+
+                    <input hidden type="checkbox" name="" class="nav_input" id="nav-mobile-input">
+
+                    <label for="nav-mobile-input" class="nav_overlay"></label>
+
+                    <input hidden type="checkbox" name="" class="nav_input-cart" id="nav-cart-input">
+
+                    <label for="nav-cart-input" class="nav_overlay-cart"></label>
+
+                    <nav class="nav_mobile">
+                        <label for="nav-mobile-input" class="nav__mobile-close">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
+                        </label>
+                        <ul class="nav__mobile-list">
+                            <li>
+                                <a href="" class="nav__mobile-link">Giỏ hàng</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__mobile-link">Giỏ hàng</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__mobile-link">Giỏ hàng</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__mobile-link">Giỏ hàng</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav__mobile-link">Giỏ hàng</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <nav class="nav_cart-pc">
+                        <div class="sidebar__cart_btn">
+                            <a href="">Giỏ hàng</a>
+                            <label for="nav-cart-input" class="nav__cart-btn-close">  
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
+                            </label>
+                        </div>
+                        <div class="shopping-cart">
+                            <h2 class="warning">OOPSS..</h2>
+                            <h2 class="notification">Giỏ hàng hiện đang trống
+                                Không có sản phẩm nào trong
+                                giỏ của bạn</h2>
+                            <button class="btn__shopping-cart">Tiếp tục mua sắm</button>   
+                        </div>
+                    </nav>
+
+                </div>   
+            </div>
+            <div id="search" class="sidenav-product">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeProduct()">&times;</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Sản Phẩm Mới </a>
+                <a href="#">Dưỡng Da</a>
+                <a href="#">Chăm Sóc Tóc</a>
+                <a href="#">Tắm & Dưỡng Thể</a>
+                <a href="#">Dưỡng Môi</a>
+                <a href="#">Combo / Bộ Sản Phẩm</a>
+                <a href="#">Có thể bạn quan tâm</a>
+                <a href="#">Vấn Đề Về Da</a>
+                <a href="#">Vấn Đề Về Tóc</a>
+                <a href="#">Tìm hiểu nguyên liệu</a>
+            </div>
+        </div>
+    </div> 
+    <div id="main">
+        <div class="paper-slider">
+            <div class="paper-item">
+                <div class="paper-content">
+                    <div class="text-1">
+                        <a class="subtitle-1">“Cocoon Vietnam – Từ mầm xanh làm đẹp đến giải thưởng danh giá tại ELLE Beauty Awards 2021”</a>
+                        <p class="subtitle-2">elle vietnam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="paper-item">
+                <div class="paper-content">
+                    <div class="text-2">
+                        <a class="subtitle-1"> “Cocoon – Mỹ phẩm thuần chay cho nét đẹp thuần Việt”</a>
+                        <p class="subtitle-2">elle vietnam</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!--  paper-slider -->
+
+    </div>   
+    
+<!-- sidebar    -->
+<script>
+    function openProduct() {
+      document.getElementById("search").style.width = "566px";
+    }
+    
+    function closeProduct() {
+      document.getElementById("search").style.width = "0";
+    }
+    </script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-1.11.0.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
+<script src="./slick-slider/app.js"></script>
+</body>
+</html>
